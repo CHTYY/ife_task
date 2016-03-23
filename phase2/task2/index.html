@@ -34,9 +34,23 @@ var aqiData = [
  var aqistr="";
  var rank=["第一名","第二名","第三名","第四名"]
  var num=0;
+ 
  for(var i=0;i<aqiData.length;i++)
  {
- 	
+ 	var temp,city;
+	for(var j=i;j<aqiData.length;j++)
+	{
+		if(aqiData[i][1]<aqiData[j][1])
+		{
+			temp=aqiData[i][1];
+			aqiData[i][1]=aqiData[j][1];
+			aqiData[j][1]=temp;
+			
+			city=aqiData[i][0];
+			aqiData[i][0]=aqiData[j][0];
+			aqiData[j][0]=city;
+		}
+	}
  	if(aqiData[i][1]>60)
  	{
  		aqistr+="<li>"+rank[num] +": "+aqiData[i][0]+ " , " +aqiData[i][1]+"</li>"
