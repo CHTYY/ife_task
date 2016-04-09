@@ -1,0 +1,18 @@
+#queueBox{
+	width:800px;
+	height: 600px;
+}
+#queueBox div{
+	width: 60px;
+	height: 60px;
+	background-color: #E25C60;
+	color: #FFFFFF;
+	border-radius: 60px;
+	text-align: center;
+	line-height: 60px;
+	float: left;
+	margin: 10px;
+}
+#queueBox div:hover{
+	cursor: pointer;
+}
